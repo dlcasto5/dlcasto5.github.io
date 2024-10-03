@@ -1,56 +1,131 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Tools</title>
-        <link rel="icon" href="https://wraithcode2018.github.io/favicon.png">
-        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://wraithcode2018.github.io/assets/text/css/wicons.css">
-        <link rel="stylesheet" href="https://wraithcode2018.github.io/assets/text/css/global.css">
-        <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-        <script src="https://wraithcode2018.github.io/assets/text/js/setnavandfooter.js"></script>
-        <style>
-            body {background: var(--background); margin: 0; font-family: "Manrope"; color: var(--text);}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tools page">
+    <title>Tools</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://wraithcode2018.github.io/favicon.png">
 
-            .wrap {height: 100vh; width: 100vw; background: var(--background); position: relative; display: flex; align-content: center; flex-wrap: wrap; align-items: center; justify-content: center; text-align: center;}
-            .toolsoption {height: 250px; width: calc(40% - 10px); background: var(--dark); margin: 10px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-direction: column;}
-            .toolsoption a {display: block; height: 130px; width: calc(80% - 20px); padding: 10px; background: var(--background-light); color: var(--text); text-decoration: none; border-radius: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center;}
-            .toolsoption a span {font-size: 14px; color: var(--text-dull);}
-            .toolsoption a:hover {background: var(--background); cursor: var(--cursor);}
-            .toolsoption.disabled a:hover {background: var(--background-light); cursor: var(--cursor);}
-            .toolsoption.disabled {filter: saturate(0.6);}
-        </style>
-    </head>
-    <body>
-        <button id="smallnavbtn" onclick="toggleSideNav()"><i class="wicon wicon-bar-menu" id="snbtnsub"></i></button>
-        <nav id="navm">
-            <!-- js! -->
-        </nav>
-        <nav id="sidenav">
-            <!-- js! -->
-        </nav>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
 
-        <div class="wrap">
-            <div class="toolsoption disabled">
-                <h2>Javascript functions</h2>
-                <a>I did the work for you, now you can use these awesome functions in your projects.<br><span>{coming soon}</span></a><!-- href="/tools/functions/"-->
-            </div>
-            <div class="toolsoption disabled">
-                <h2>Web Components</h2>
-                <a>Compact element kits integratable with a single script tag. This is for nerds.<br><span>{coming soon}</span></a><!-- href="/tools/webcomponents/"-->
-            </div>
-            <div class="toolsoption disabled">
-                <h2>Other</h2>
-                <a>Random fun stuff :]<br><span>{coming soon}</span></a><!-- href="/tools/other/"-->
-            </div>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://wraithcode2018.github.io/assets/text/css/wicons.css">
+    <link rel="stylesheet" href="https://wraithcode2018.github.io/assets/text/css/global.css">
+
+    <!-- JavaScript Libraries -->
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js" defer></script>
+    <script src="https://wraithcode2018.github.io/assets/text/js/setnavandfooter.js" defer></script>
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            background: var(--background);
+            margin: 0;
+            font-family: "Manrope", sans-serif;
+            color: var(--text);
+        }
+
+        .wrap {
+            height: 100vh;
+            width: 100vw;
+            background: var(--background);
+            display: flex;
+            align-content: center;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .toolsoption {
+            height: 250px;
+            width: calc(40% - 10px);
+            background: var(--dark);
+            margin: 10px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.2s ease, filter 0.2s ease;
+        }
+
+        .toolsoption a {
+            display: block;
+            height: 130px;
+            width: calc(80% - 20px);
+            padding: 10px;
+            background: var(--background-light);
+            color: var(--text);
+            text-decoration: none;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.2s ease;
+        }
+
+        .toolsoption a span {
+            font-size: 14px;
+            color: var(--text-dull);
+        }
+
+        .toolsoption a:hover {
+            background: var(--background);
+            cursor: var(--cursor);
+        }
+
+        .toolsoption.disabled {
+            filter: saturate(0.6);
+        }
+
+        .toolsoption.disabled a:hover {
+            background: var(--background-light);
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <!-- Small Navigation Button -->
+    <button id="smallnavbtn" onclick="toggleSideNav()">
+        <i class="wicon wicon-bar-menu" id="snbtnsub"></i>
+    </button>
+
+    <!-- Main Navigation -->
+    <nav id="navm">
+        <!-- JS populated content -->
+    </nav>
+
+    <!-- Side Navigation -->
+    <nav id="sidenav">
+        <!-- JS populated content -->
+    </nav>
+
+    <!-- Main Content Wrapper -->
+    <div class="wrap">
+        <div class="toolsoption">
+            <a href="#tool1">
+                Tool 1
+                <span>Description of Tool 1</span>
+            </a>
         </div>
-        <footer id="footer">
-            <!-- js! -->
-        </footer>
-
-        <script>
-            
-        </script>
-        <script src="https://wraithcode2018.github.io/assets/text/js/global.js"></script>
-    </body>
+        <div class="toolsoption">
+            <a href="#tool2">
+                Tool 2
+                <span>Description of Tool 2</span>
+            </a>
+        </div>
+        <div class="toolsoption disabled">
+            <a href="#tool3" class="disabled">
+                Tool 3 (Disabled)
+                <span>Description of Tool 3</span>
+            </a>
+        </div>
+    </div>
+</body>
 </html>
