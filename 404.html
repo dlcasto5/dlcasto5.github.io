@@ -1,49 +1,110 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>404</title>
-        <link rel="icon" href="/favicon.png">
-        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="/assets/text/css/wicons.css">
-        <link rel="stylesheet" href="/assets/text/css/global.css">
-        <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-        <style>
-            body {background: var(--background); margin: 0; font-family: "Manrope"; color: var(--text);}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="404 - Page Not Found">
+    <title>404</title>
 
-            .wrc {font-family: "Pixelify Sans"; color: #00ff00; height: calc(100vh - 10px); width: 100vw; background: radial-gradient( 0%, var(--background) 35%); position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center;}
-            .h {font-size: 80px; text-shadow: 0px 0px 10px #00ff00, 0px 0px 50px #caffca, 0px 0px 150px #00ffff, 0px 0px 300px #00ff00; width: 100%; text-align: center; margin: 0; padding: 0;}
-            #wr {font-size: 26px; color: #00b000; text-shadow: 0px 0px 8px #00b000, 0px 0px 40px #cab0ca, 0px 0px 120px #00b0b0, 0px 0px 240px #00b000; width: 100%; text-align: center; margin: 0; padding: 0;}
-            .wrc a {font-size: 20px; color: #00d000; text-shadow: 0px 0px 6px #00d000, 0px 0px 30px #cad0ca, 0px 0px 90px #00d0d0, 0px 0px 190px #00d000;}
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.png">
 
-            @media screen and (max-width: 8in) {
-                .h {font-size: 60px;}
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+
+    <!-- Icons and Global Styles -->
+    <link rel="stylesheet" href="/assets/text/css/wicons.css">
+    <link rel="stylesheet" href="/assets/text/css/global.css">
+
+    <!-- Typewriter Effect -->
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js" defer></script>
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            background: var(--background);
+            margin: 0;
+            font-family: "Manrope", sans-serif;
+            color: var(--text);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .wrc {
+            font-family: "Pixelify Sans", sans-serif;
+            color: #00ff00;
+            background: radial-gradient(circle, var(--background) 35%);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .h {
+            font-size: 80px;
+            text-shadow: 0px 0px 10px #00ff00, 0px 0px 50px #caffca, 0px 0px 150px #00ffff, 0px 0px 300px #00ff00;
+            margin: 0;
+        }
+
+        #wr {
+            font-size: 26px;
+            color: #00b000;
+            text-shadow: 0px 0px 8px #00b000, 0px 0px 40px #cab0ca, 0px 0px 120px #00b0b0, 0px 0px 240px #00b000;
+            margin: 0;
+        }
+
+        a {
+            font-size: 20px;
+            color: #00d000;
+            text-shadow: 0px 0px 6px #00d000, 0px 0px 30px #cad0ca, 0px 0px 90px #00d0d0, 0px 0px 190px #00d000;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #00ff00;
+        }
+
+        @media screen and (max-width: 8in) {
+            .h {
+                font-size: 60px;
             }
-            @media screen and (max-width: 5in) {
-                .h {font-size: 35px;}
-                .wrc {height: 300px;}
-                .downarrow {display: none;}
-                .content {flex-direction: column;}
-                .news {width: 100%;}
-                .about {width: 100%; border-left: none; margin-left: 0; padding-left: 0;}
-            }
-        </style>
-    </head>
-    <body>
-        <div class="wrc">
-            <span class="h">404</span>
-            <span id="wr"></span>
-            <a href="/">Go Home</a>
-        </div>
+        }
 
-        <script>
-            var typewriter = new Typewriter('#wr', {
-                cursor: "_",
-            });
-            typewriter
-                .typeString('Page Not Found')
-                .start();
-        </script>
-        <script src="/assets/text/js/global.js"></script>
-    </body>
+        @media screen and (max-width: 5in) {
+            .h {
+                font-size: 35px;
+            }
+
+            #wr {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrc">
+        <span class="h">404</span>
+        <span id="wr"></span>
+        <a href="/">Go Home</a>
+    </div>
+
+    <!-- Typewriter Effect Script -->
+    <script>
+        var typewriter = new Typewriter('#wr', {
+            cursor: "_",
+        });
+
+        typewriter
+            .typeString('Page Not Found')
+            .start();
+    </script>
+
+    <!-- Global Script -->
+    <script src="/assets/text/js/global.js"></script>
+</body>
 </html>
