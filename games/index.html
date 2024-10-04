@@ -13,8 +13,18 @@
     <!-- External Script -->
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js" defer></script>
     <script src="/assets/text/js/setnavandfooter.js" defer></script>
-    
+
     <style>
+        /* Root scaling for GUI */
+        :root {
+            --scale-factor: 1; /* Default scale */
+            --font-size: calc(16px * var(--scale-factor));
+            --image-size: calc(80px * var(--scale-factor));
+            --button-padding: calc(10px * var(--scale-factor));
+            --input-padding: calc(8px * var(--scale-factor));
+            --input-font-size: calc(16px * var(--scale-factor));
+        }
+
         /* Basic body styling */
         body {
             background: var(--background);
@@ -25,6 +35,7 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            font-size: var(--font-size);
         }
 
         /* Container setup */
@@ -60,8 +71,8 @@
 
         /* Game image styling */
         .game img {
-            height: 80px;
-            width: 80px;
+            height: var(--image-size);
+            width: var(--image-size);
             border-radius: 8px;
             margin-right: 10px;
             box-shadow: 0 0 8px currentColor;
@@ -70,7 +81,7 @@
         /* Game name and status */
         .game p {
             margin: 0;
-            font-size: 18px;
+            font-size: 1.125rem; /* Scale with root font size */
             font-weight: 400;
             text-align: left;
             flex-grow: 1;
@@ -79,13 +90,13 @@
 
         /* Launch button styling */
         .game button {
-            padding: 10px;
+            padding: var(--button-padding);
             background: var(--background-light);
             color: var(--text);
             border: none;
             cursor: pointer;
             transition: text-shadow 0.2s ease-in-out;
-            font-size: 16px;
+            font-size: 1rem; /* Scale with root font size */
         }
 
         /* Hover effect for button */
@@ -104,13 +115,13 @@
         #searchbar {
             height: 40px;
             width: 60%;
-            padding: 8px;
+            padding: var(--input-padding);
             border: 2px solid var(--background-light);
             border-radius: 8px;
             color: var(--text);
             background: none;
             margin-bottom: 20px;
-            font-size: 16px;
+            font-size: var(--input-font-size);
         }
 
         #searchbar:focus {
@@ -118,55 +129,28 @@
             box-shadow: 0 0 8px var(--text-dull);
         }
 
-        /* Responsive Styles */
+        /* Responsive scaling for different screen sizes */
         @media screen and (max-width: 1024px) {
-            .scroll {
-                width: 90%;
-            }
-
-            .game img {
-                height: 60px;
-                width: 60px;
-            }
-
-            .game p {
-                font-size: 16px;
-            }
-
-            .game button {
-                font-size: 14px;
-            }
-
-            #searchbar {
-                width: 80%;
+            :root {
+                --scale-factor: 0.9;
             }
         }
 
         @media screen and (max-width: 768px) {
+            :root {
+                --scale-factor: 0.75;
+            }
+
             .scroll {
-                width: 100%;
-            }
-
-            .game img {
-                height: 50px;
-                width: 50px;
-            }
-
-            .game p {
-                font-size: 14px;
-            }
-
-            .game button {
-                font-size: 12px;
-            }
-
-            #searchbar {
                 width: 90%;
-                font-size: 14px;
             }
         }
 
         @media screen and (max-width: 480px) {
+            :root {
+                --scale-factor: 0.65;
+            }
+
             .scroll {
                 padding: 10px;
             }
@@ -178,24 +162,16 @@
             }
 
             .game img {
-                height: 40px;
-                width: 40px;
                 margin-bottom: 10px;
             }
 
             .game p {
-                font-size: 14px;
                 text-align: center;
                 width: 100%;
             }
 
-            .game button {
-                font-size: 12px;
-            }
-
             #searchbar {
                 width: 100%;
-                font-size: 14px;
             }
         }
     </style>
@@ -236,7 +212,7 @@
     </div>
 
     <footer id="footer">
-        <!-- Footer content can go here -->
+        <!-- Footer content -->
     </footer>
 
     <!-- JavaScript for Search and Game Launch -->
@@ -269,29 +245,19 @@
                     <meta name="viewport" content="width=device-width, initial-scale=1.0">
                     <title>Loading ${name}</title>
                     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
-                    <style>body {background: #101010; font-family: 'Pixelify Sans'; color: #00ff00; text-align: center;}#wr {text-shadow: 0 0 8px currentColor;}</style>
+                    <style>body {background: #101010; font-family: 'Pixelify Sans'; color: #00ff00; text-align: center;}</style>
                 </head>
                 <body>
-                    <span id="wr"></span>
-                    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"><\/script>
+                    <h1>Loading ${name}...</h1>
+                    <p>Launching now...</p>
                     <script>
-                        var typewriter = new Typewriter('#wr', {cursor: "_", delay: 50});
-                        typewriter
-                            .typeString('-wc launch ${id}')
-                            .pauseFor(200)
-                            .typeString('<br>Loading ${name}...')
-                            .pauseFor(1300)
-                            .typeString('<br>Loaded! Launching now.')
-                            .start();
-
-                        setTimeout(function() {
+                        setTimeout(() => {
                             window.location.href = '/${id}';
                         }, 4000);
-                    <\/script>
+                    </script>
                 </body>
                 </html>
             `;
-
             newTab.document.open();
             newTab.document.write(htmlContent);
             newTab.document.close();
@@ -301,4 +267,3 @@
     <script src="/assets/text/js/global.js"></script>
 </body>
 </html>
-
