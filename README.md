@@ -1,1 +1,1 @@
-creadits to wraithcode2023 for making this website possible
+I give 100% creadits to wraithcodestopit
