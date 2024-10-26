@@ -6,8 +6,6 @@ function updateNavAndFooter() {
         <div class="right">
             <button class="navbtn" onclick="window.location.href='/axis/';"><i class="wicon wicon-axis"></i><br><span class="navtext">Axis</span></button>
             <button class="navbtn" onclick="window.location.href='/games/';"><i class="wicon wicon-gamepad-handles"></i><br><span class="navtext">Games</span></button>
-            <button class="navbtn" onclick="window.location.href='/tools/';"><i class="wicon wicon-tools"></i><br><span class="navtext">Tools</span></button>
-            <button class="navbtn" onclick="window.location.href='/settings/';"><i class="wicon wicon-gear"></i><br><span class="navtext">Settings</span></button>
         </div>
     `;
     const navs = document.getElementById("sidenav");
@@ -16,8 +14,6 @@ function updateNavAndFooter() {
         <button onclick="window.location.href='/';"><i class="wicon wicon-home"></i><span>Home</span></button>
         <button onclick="window.location.href='/axis/';"><i class="wicon wicon-axis"></i><span>Axis</span></button>
         <button onclick="window.location.href='/games/';"><i class="wicon wicon-gamepad-handles"></i><span>Games</span></button>
-        <button onclick="window.location.href='/tools/';"><i class="wicon wicon-tools"></i><span>Tools</span></button>
-        <button onclick="window.location.href='/settings/';"><i class="wicon wicon-gear"></i><span>Settings</span></button>
     `;
             
     const footer = document.getElementById("footer");
@@ -33,22 +29,6 @@ function updateNavAndFooter() {
                     <p>Personal links</p>
                     <a href="https://github.com/dlcasto4"><i class="wicon wicon-github"></i>&nbsp;Github</a>
                 </div>
-                <div class="section">
-                    <p>Navigation</p>
-                    <a href="https://forms.gle/AVzecxUqzPSVxCGa9"><i class="wicon wicon-gamepad-handles"></i>&nbsp;Game Request Form</a>
-                </div>
-            </div>
-            <div class="rightwrapper">
-                <div class="section exc">
-                    <p>Community</p>
-                    <a href="mailto:kai.pollack@dcinternationalschool.org"><i class="wicon wicon-email"></i>&nbsp;Email</a>
-                    <a href="https://www.reddit.com/r/wraithcode/"><i class="wicon wicon-reddit"></i>&nbsp;Join the wraiths</a>
-                    <div class="spacer"></div>
-                </div>
-                <div class="spacer"></div>
-                <a href="https://buymeacoffee.com/wraithcode"><i class="wicon wicon-buymeacoffee"></i>&nbsp;Buy me a coffee (WIP)</a>
-            </div>
-        </div>
     `;
 }
 document.addEventListener("DOMContentLoaded", updateNavAndFooter)
