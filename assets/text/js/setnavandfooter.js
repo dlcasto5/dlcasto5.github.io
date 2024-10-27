@@ -29,6 +29,11 @@ function updateNavAndFooter() {
                     <p>Personal links</p>
                     <a href="https://github.com/dlcasto4"><i class="wicon wicon-github"></i>&nbsp;Github</a>
                 </div>
+                    <div class="section">
+                    <p>Navigation</p>
+                    <a href="https://forms.gle/NFSRt3jn6fzgFyBH8"><i class="wicon wicon-gamepad-handles"></i>&nbsp;Game Request Form</a>
+                </div>
+        </div>
     `;
 }
 document.addEventListener("DOMContentLoaded", updateNavAndFooter)
