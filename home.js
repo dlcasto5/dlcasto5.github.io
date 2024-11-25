@@ -200,6 +200,7 @@ function getRandomUrl() {
   const randomUrls = [
     "https://classroom.google.com",
     "https://drive.google.com",
+    "https://dlcasto3.github.io",
   ];
   return randomUrls[randRange(0, randomUrls.length)];
 }
