@@ -14,6 +14,7 @@ function updateNavAndFooter() {
         <button onclick="window.location.href='/';"><i class="wicon wicon-home"></i><span>Home</span></button>
         <button onclick="window.location.href='/axis/';"><i class="wicon wicon-axis"></i><span>Axis</span></button>
         <button onclick="window.location.href='/games/';"><i class="wicon wicon-gamepad-handles"></i><span>Games</span></button>
+        <button onclick="window.location.href='/apps/';"><span>Games</span></button>
     `;
             
     const footer = document.getElementById("footer");
