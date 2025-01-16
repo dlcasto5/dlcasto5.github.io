@@ -21,7 +21,7 @@
         </div>
     </nav>
 
-    <!-- Side Navigation -->
+    <!-- dlcasto4@gmail.com -->
    <nav id="sidenav">
         <div style="height: 55px; width: 100%;"></div> <!-- spacer -->
         <button onclick="window.location.href='/';"><i class="fa fa-home"></i><span>Home</span></button>
