@@ -7,12 +7,6 @@
             const sidenav = document.getElementById('sidenav');
             sidenav.style.left = sidenav.style.left === '0px' ? '-200px' : '0px';
         }
-
-        function changeTitle() {
-            const newTitle = document.getElementById('titleInput').value;
-            document.title = newTitle || "Devon Casto's Website"; // Default title if input is empty
-        }
-    </script>
 </head>
 
 <body>
@@ -36,30 +30,25 @@
         <button onclick="window.location.href='/apps';"><i class="fa fa-apps"></i><span>apps</span></button>
     </nav>
 
-    <!-- Main Content -->
    <header>
         <h1>Devon Casto's Website</h1>
     </header>
 
-    <!-- Title Input Section -->
    <section id="titleInputSection" style="text-align: center; margin: 20px;">
         <input type="text" id="titleInput" placeholder="Enter new title">
         <button onclick="changeTitle()">Set Title</button>
     </section>
 
-    <!-- About Section -->
    <section id="about">
         <h2>About Me</h2>
         <p>Hi! I'm Devon Casto, a web developer for creating "school-friendly" websites.</p>
     </section>
 
-    <!-- Contact Section -->
    <section id="contact">
         <h2> old Contact information</h2>
         <p>Email: dlcasto3@boe.jack.k12.wv.us</p>
     </section>
 
-    <!-- Footer -->
    <footer>
         <p> credits to wraithcode2023 </p>
     </footer>
