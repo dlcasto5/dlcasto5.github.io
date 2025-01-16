@@ -10,29 +10,8 @@
 </head>
 
 <body>
-    <button id="smallnavbtn" onclick="toggleSideNav()"><i class="fa fa-bars" id="snbtnsub"></i></button>
-  
-   <nav class="m">
-        <button class="navbtn" onclick="window.location.href='/';"><i class="fa fa-home"></i><br><span class="navtext">Home</span></button>
-        <div class="right">
-            <button class="navbtn" onclick="window.location.href='/axis';"><i class="fa fa-cube"></i><br><span class="navtext">Axis</span></button>
-            <button class="navbtn" onclick="window.location.href='/games';"><i class="fa fa-gamepad"></i><br><span class="navtext">Games</span></button>
-            <button class="navbtn" onclick="window.location.href='/apps';"><i class="fa fa-apps"></i><br><span class="navtext">apps</span></button>
-        </div>
-    </nav>
-
     <!-- dlcasto4@gmail.com -->
-   <nav id="sidenav">
-        <div style="height: 55px; width: 100%;"></div> <!-- spacer -->
-        <button onclick="window.location.href='/';"><i class="fa fa-home"></i><span>Home</span></button>
-        <button onclick="window.location.href='/axis';"><i class="fa fa-cube"></i><span>Axis</span></button>
-        <button onclick="window.location.href='/games';"><i class="fa fa-gamepad"></i><span>Games</span></button>
-        <button onclick="window.location.href='/apps';"><i class="fa fa-apps"></i><span>apps</span></button>
-    </nav>
-
-   <header>
         <h1>Devon Casto's Website</h1>
-    </header>
 
    <section id="titleInputSection" style="text-align: center; margin: 20px;">
         <input type="text" id="titleInput" placeholder="Enter new title">
