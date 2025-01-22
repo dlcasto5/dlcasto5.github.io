@@ -7,17 +7,17 @@
     
     <style>
         :root {
-            --background: #061a20;
-            --background-light: #0a2730;
-            --text: #ffffff;
-            --btn-hover: #ffffff0f;
+            background: #061a20;
+            background-light: #0a2730;
+            text: #ffffff;
+            btn-hover: #ffffff0f;
         }
         
         body {
-            background: var(--background);
+            background: var(background);
             margin: 0;
             font-family: "Manrope", Arial, sans-serif;
-            color: var(--text);
+            color: var(text);
             padding-top: 80px;
         }
         
@@ -60,12 +60,12 @@
         }
         
         #smallnavbtn:hover {
-            text-shadow: 0 0 10px var(--text);
+            text-shadow: 0 0 10px var(text);
             cursor: pointer;
         }
         
         .navbtn {
-            color: var(--text);
+            color: var(text);
             background: transparent;
             border: none;
             height: 40px;
@@ -94,14 +94,14 @@
             height: 1px;
             bottom: 0px;
             left: 20px;
-            background-color: var(--text);
+            background-color: var(text);
             transform-origin: bottom center;
             transition: transform 0.25s ease-out;
         }
         
         .navbtn:hover::after {
             transform: scaleX(1);
-            box-shadow: 0 0 5px 1px var(--text);
+            box-shadow: 0 0 5px 1px var(text);
         }
         
         #sidenav {
@@ -110,7 +110,7 @@
             position: fixed;
             left: -200px;
             top: 0;
-            background: var(--background);
+            background: var(background);
             transition: left 0.2s ease;
             z-index: 100;
             display: none;
@@ -121,7 +121,7 @@
         #sidenav button {
             height: 40px;
             width: 100%;
-            color: var(--text);
+            color: var(text);
             background: transparent;
             border: none;
             font-size: 25px;
@@ -130,7 +130,7 @@
         }
         
         #sidenav button:hover {
-            background: var(--background-light);
+            background: var(background-light);
             cursor: pointer;
         }
         
@@ -147,13 +147,22 @@
             text-align: center;
             margin-top: 20px;
         }
+        
+        h2 {
+            text-align: center;
+        }
+
+        p {
+            text-align: left;
+            margin-top: 20px;
+        }
 
         /* Responsive styles */
         @media screen and (max-width: 6in) {
             .navtext {display: none;}
             .navbtn {width: 40px; font-size: 22px;}
             nav.m button {display: flex; justify-content: center; align-items: center;}
-            nav.m button:hover {text-shadow: 0 0 10px var(--text); cursor: pointer;}
+            nav.m button:hover {text-shadow: 0 0 10px var(text); cursor: pointer;}
         }
         
         @media screen and (max-width: 5in) {
@@ -168,11 +177,6 @@
         function toggleSideNav() {
             const sidenav = document.getElementById('sidenav');
             sidenav.style.left = sidenav.style.left === '0px' ? '-200px' : '0px';
-        }
-
-        function changeTitle() {
-            const newTitle = document.getElementById('titleInput').value;
-            document.title = newTitle || "Devon Casto's Website"; // Default title if input is empty
         }
     </script>
 </head>
@@ -204,27 +208,55 @@
         <h1>Devon Casto's Website</h1>
     </header>
 
-    <!-- Title Input Section -->
-    <section id="titleInputSection" style="text-align: center; margin: 20px;">
-        <input type="text" id="titleInput" placeholder="Enter new title">
-        <button onclick="changeTitle()">Set Title</button>
-    </section>
-
     <!-- About Section -->
     <section id="about">
         <h2>About Me</h2>
-        <p>Hi! I'm Devon Casto, a web developer for creating "school-friendly" websites.</p>
+        <p>Hi! I'm Devon Casto, a middle school student that has his own website for "educational stuff"</p>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2> old Contact information</h2>
+    <!-- Old Contact Section -->
+    <section id="old-contact">
+        <h2>my useless Contact information</h2>
         <p>Email: dlcasto3@boe.jack.k12.wv.us</p>
     </section>
 
+    <!-- New Contact Section -->
+    <section id="new-contact">
+        <h2>new Contact information</h2>
+        <p>Email: dlcasto4@gmail.com</p>
+    </section>
+
+    <!-- New Contact Section -->
+    <section id="old">
+        <h2>Old website</h2>
+        <p><a href=https://github.com/dlcasto4/dlcasto4.github.io/issues/new/>here</p>
+    </section>
+    
+    <!-- issues -->
+    <section id="issue">
+        <h2>Submit an issue</h2>
+        <p><a href=https://github.com/dlcasto4/dlcasto4.github.io/issues/new/>Submit issue here</p>
+    </section>
+
+
     <!-- Footer -->
-    <footer>
-        <p> credits to wraithcode2023 </p>
+    <footer id="news">
+        <h2>NEWS</h2>
+        <p> Added "old website link" no longer maintained
+            Added "submit issues"
+            Changed "About Me"
+            Potentially fixed a lot of CSS issues for new proxy
+            Removed Feature: Change Title
+            Changed old contact information to useless contact information
+            Added new contact information with email
+            Added News Section
+            Changed logo for "WeaveSilk" again
+            Changed logo for "WeaveSilk"
+            added logo for "WeaveSilk"
+            Added "WeaveSilk"
+            Added "breaklock"
+            "Important Notice: my proxy https://devon.work.gd/ got blocked by securely"
+        </p>
     </footer>
 </body>
 </html>
