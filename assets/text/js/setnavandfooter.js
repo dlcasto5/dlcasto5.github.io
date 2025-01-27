@@ -6,7 +6,7 @@ function updateNavAndFooter() {
         <div class="right">
             <button class="navbtn" onclick="window.location.href='/axis/';"><i class="wicon wicon-axis"></i><br><span class="navtext">Axis</span></button>
             <button class="navbtn" onclick="window.location.href='/games/';"><i class="wicon wicon-gamepad-handles"></i><br><span class="navtext">Games</span></button>
-            <button onclick="window.location.href='/apps/';"><i class="fa-brands fa-app-store-ios"></i><br><span class="navtext">apps</span></button>
+            <button class="navbtn" onclick="window.location.href='/apps/';"><i class="fa-brands fa-app-store-ios"></i><br><span class="navtext">apps</span></button>
         </div>
     `;
     const navs = document.getElementById("sidenav");
