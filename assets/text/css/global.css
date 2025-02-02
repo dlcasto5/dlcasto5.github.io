@@ -143,7 +143,6 @@ nav.m .right {
 
 #sidenav button:hover {
     box-shadow: 0 0 10px 2px var(--background-lighter);
-    cursor: url('/pointer.svg'), pointer;
 }
 
 #sidenav button span {
