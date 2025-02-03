@@ -64,11 +64,8 @@
         .game {
             height: 100px;
             width: 100%;
-            padding: 10px;
-            border: 0px solid var(--alt);
-            transition: 0.35s ease;
-            z-index: 10;
-            border-radius: var(--rounded);
+            display: flex;
+            border-bottom: 1px dashed var(--text-dull);
         }
 
         .game img {
@@ -164,7 +161,7 @@
         <input placeholder="Search..." id="searchbar" type="text">
         <div class="scroll">
             <div class="game" data-name="weave silk">
-                <img src="https://dlcasto4.github.io/weavesilk/logo.png">
+                <img src="https://dlcasto5.github.io/weavesilk/logo.png">
                 <p>weavesilk<br><span style="color: lime; font-size: 14px;">newest</span>
                 </p><button onclick="launchGame('weave silk', 'weavesilk')">Launch</button>
                 <div class="game" data-name="break lock">
@@ -224,9 +221,9 @@
                 </div>
             </div>
             <div class="game" data-name="tiny fishing">
-                <button onclick="launchGame('tiny fishing', 'tinyfishing')">
-                    <img src="https://th.bing.com/th?id=OIP.HLJslfR0_lbmrAaR9x2VDgHaHa&w=80&h=80&c=1&vt=10&bgcl=74d664&r=0&o=6&pid=5.1"></button>
+                <button onclick="launchGame('tiny fishing', 'tinyfishing')">launch</button>
                 <p>tiny fishing</p>
+                <img src="https://th.bing.com/th?id=OIP.HLJslfR0_lbmrAaR9x2VDgHaHa&w=80&h=80&c=1&vt=10&bgcl=74d664&r=0&o=6&pid=5.1">
             </div>
             <div class="game" data-name="cookie clicker">
                 <img src="/assets/image/game/cookieclicker.png">
