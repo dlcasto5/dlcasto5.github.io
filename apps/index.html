@@ -73,8 +73,8 @@
                     <button onclick="launchApp('Securly-Kill', 'Securly-Kill')">Launch</button>
                     <div class="game" data-name="helios Browser">
                     </div>
-                        <p></p>
-                        <button onclick="launchApp('rammerhead browser', 'https://browser.rammerhead.org/dafc26760d824e739edbb3b26dbd8ace/_rhspgfQ7://ieM.QxBfxf.fuX/?int_~M=lwt')">Launch</button>
+                       <p></p>
+                       <button onclick="cloakTab('rammerhead browser', 'browser.rammerhead.org')">Launch</button>
                 </div>
             </div>
         </div>
@@ -141,6 +141,22 @@
                     newTab.location.href = `/${id}`;
                 }, 4000);
             }
+
+            function cloakTab(name, id) {
+                if (localStorage.getItem("wcCloak")) {
+                    var a = localStorage.getItem("wcCloak").split(", ");
+                    document.head.title = a[1];
+                    var favicon = document.querySelector("link[rel~='icon']");
+                if (!favicon) {
+                    favicon = document.createElement('link');
+                    favicon.rel = 'icon';
+                    document.head.appendChild(favicon);
+                }
+                favicon.href = a[2];
+            } else {
+                return;
+            }
+        }
         </script>
         <script src="/assets/text/js/global.js"></script>
     </body>
